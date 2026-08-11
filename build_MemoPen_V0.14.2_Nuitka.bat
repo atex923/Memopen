@@ -3,7 +3,7 @@ setlocal EnableExtensions
 chcp 65001 >nul
 
 cd /d "%~dp0"
-set "APP=MemoPen_V0.14.1.py"
+set "APP=MemoPen_V0.14.2.py"
 set "DIST=%~dp0dist"
 set "CHECK=%~dp0nuitka_standalone_check"
 
@@ -14,7 +14,7 @@ if not exist "%APP%" (
 )
 
 echo ============================================================
-echo MemoPen V0.14.1 - Nuitka 建置
+echo MemoPen V0.14.2 - Nuitka 建置
 echo ============================================================
 
 echo [1/4] 安裝或更新建置套件...
@@ -34,7 +34,7 @@ py -m nuitka ^
   --assume-yes-for-downloads ^
   --remove-output ^
   --output-dir="%CHECK%" ^
-  --report="%CHECK%\MemoPen_V0.14.1_standalone_report.xml" ^
+  --report="%CHECK%\MemoPen_V0.14.2_standalone_report.xml" ^
   "%APP%"
 if errorlevel 1 goto :error
 
@@ -46,14 +46,14 @@ py -m nuitka ^
   --assume-yes-for-downloads ^
   --remove-output ^
   --output-dir="%DIST%" ^
-  --output-filename=MemoPen_V0.14.1.exe ^
-  --report="%DIST%\MemoPen_V0.14.1_onefile_report.xml" ^
+  --output-filename=MemoPen_V0.14.2.exe ^
+  --report="%DIST%\MemoPen_V0.14.2_onefile_report.xml" ^
   "%APP%"
 if errorlevel 1 goto :error
 
 echo.
 echo ============================================================
-echo 完成：%DIST%\MemoPen_V0.14.1.exe
+echo 完成：%DIST%\MemoPen_V0.14.2.exe
 echo ============================================================
 explorer "%DIST%"
 pause

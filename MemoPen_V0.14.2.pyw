@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-MemoPen - 隨手記 V0.14.1
+MemoPen - 隨手記 V0.14.2
 
 功能：
 - PySide6 / Qt 無標題列筆記視窗
@@ -23,8 +23,8 @@ Nuitka 專案設定：
 #    nuitka-project: --windows-console-mode=disable
 #    nuitka-project: --product-name=MemoPen
 #    nuitka-project: --file-description="MemoPen - 隨手記"
-#    nuitka-project: --product-version=0.14.1.0
-#    nuitka-project: --file-version=0.14.1.0
+#    nuitka-project: --product-version=0.14.2.0
+#    nuitka-project: --file-version=0.14.2.0
 
 from __future__ import annotations
 
@@ -38,7 +38,7 @@ from typing import Final
 
 APP_NAME: Final = "MemoPen"
 APP_TITLE: Final = "隨手記"
-APP_VERSION: Final = "V0.14.1"
+APP_VERSION: Final = "V0.14.2"
 AUTO_SAVE_MS: Final = 30_000
 DEFAULT_WIDTH: Final = 760
 DEFAULT_HEIGHT: Final = 520

@@ -1,4 +1,4 @@
-MemoPen V0.14.1 - Nuitka 單一 EXE 轉譯說明
+MemoPen V0.14.2 - Nuitka 單一 EXE 轉譯說明
 ============================================================
 
 一、建議環境
@@ -15,8 +15,8 @@ py -m nuitka ^
   --assume-yes-for-downloads ^
   --remove-output ^
   --output-dir=nuitka_standalone_check ^
-  --report=nuitka_standalone_check\MemoPen_V0.14.1_standalone_report.xml ^
-  MemoPen_V0.14.1.py
+  --report=nuitka_standalone_check\MemoPen_V0.14.2_standalone_report.xml ^
+  MemoPen_V0.14.2.py
 
 四、建立單一 EXE
 py -m nuitka ^
@@ -24,9 +24,9 @@ py -m nuitka ^
   --assume-yes-for-downloads ^
   --remove-output ^
   --output-dir=dist ^
-  --output-filename=MemoPen_V0.14.1.exe ^
-  --report=dist\MemoPen_V0.14.1_onefile_report.xml ^
-  MemoPen_V0.14.1.py
+  --output-filename=MemoPen_V0.14.2.exe ^
+  --report=dist\MemoPen_V0.14.2_onefile_report.xml ^
+  MemoPen_V0.14.2.py
 
 程式碼內已內建下列 Nuitka 專案選項：
 - --enable-plugin=pyside6
@@ -46,10 +46,10 @@ Nuitka 也接受 PNG 圖示，例如：
 
 七、只執行一行快速轉譯
 因為程式碼已內建 PySide6、無控制台與版本資訊設定，可直接執行：
-py -m nuitka --mode=onefile --assume-yes-for-downloads --remove-output --output-dir=dist --output-filename=MemoPen_V0.14.1.exe MemoPen_V0.14.1.py
+py -m nuitka --mode=onefile --assume-yes-for-downloads --remove-output --output-dir=dist --output-filename=MemoPen_V0.14.2.exe MemoPen_V0.14.2.py
 
 八、輸出檔案
 完成後：
-dist\MemoPen_V0.14.1.exe
+dist\MemoPen_V0.14.2.exe
 
 注意：Windows EXE 必須在 Windows 上建置。Nuitka 不會從 Linux 或 macOS 直接交叉編譯 Windows EXE。
