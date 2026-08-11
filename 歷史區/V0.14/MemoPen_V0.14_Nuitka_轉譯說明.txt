@@ -1,0 +1,55 @@
+MemoPen V0.14 — Nuitka 單一 EXE 轉譯說明
+============================================================
+
+一、建議環境
+- Windows 10 / 11 64 位元
+- CPython 3.11～3.13（建議使用 python.org 版本）
+- 以目前要執行 EXE 的相同位元架構建置，例如 64 位元 Python 建置 64 位元 EXE
+
+二、安裝建置套件
+py -m pip install --upgrade Nuitka PySide6 ordered-set zstandard
+
+三、先做 standalone 相依項檢查
+py -m nuitka ^
+  --mode=standalone ^
+  --assume-yes-for-downloads ^
+  --remove-output ^
+  --output-dir=nuitka_standalone_check ^
+  --report=nuitka_standalone_check\MemoPen_V0.14_standalone_report.xml ^
+  MemoPen_V0.14.py
+
+四、建立單一 EXE
+py -m nuitka ^
+  --mode=onefile ^
+  --assume-yes-for-downloads ^
+  --remove-output ^
+  --output-dir=dist ^
+  --output-filename=MemoPen_V0.14.exe ^
+  --report=dist\MemoPen_V0.14_onefile_report.xml ^
+  MemoPen_V0.14.py
+
+程式碼內已內建下列 Nuitka 專案選項：
+- --enable-plugin=pyside6
+- Windows：--windows-console-mode=disable
+- product-name / file-description / product-version / file-version
+
+五、指定 Visual Studio 編譯器（可選）
+在 Nuitka 命令加入：
+--msvc=latest
+
+六、加入程式圖示（可選）
+將 MemoPen.ico 放在程式旁，並在 onefile 命令加入：
+--windows-icon-from-ico=MemoPen.ico
+
+Nuitka 也接受 PNG 圖示，例如：
+--windows-icon-from-ico=MemoPen.png
+
+七、只執行一行快速轉譯
+因為程式碼已內建 PySide6、無控制台與版本資訊設定，可直接執行：
+py -m nuitka --mode=onefile --assume-yes-for-downloads --remove-output --output-dir=dist --output-filename=MemoPen_V0.14.exe MemoPen_V0.14.py
+
+八、輸出檔案
+完成後：
+dist\MemoPen_V0.14.exe
+
+注意：Windows EXE 必須在 Windows 上建置。Nuitka 不會從 Linux 或 macOS 直接交叉編譯 Windows EXE。
