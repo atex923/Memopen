@@ -20,9 +20,9 @@ MemoPen 是一個為「快速記下眼前想法」設計的輕量隨手記工具
 
 ## 最新版本
 
-- 目前主程式：`MemoPen_V0.14.3.py`
-- Windows 無主控台版本：`MemoPen_V0.14.3.pyw`
-- Nuitka 建置批次檔：`build_MemoPen_V0.14.3_Nuitka.bat`
+- 目前主程式：`MemoPen_V0.14.2.py`
+- Windows 無主控台版本：`MemoPen_V0.14.2.pyw`
+- Nuitka 建置批次檔：`build_MemoPen_V0.14.2_Nuitka.bat`
 
 ## 版本存放
 
@@ -30,36 +30,34 @@ GitHub 根目錄只保留最新可執行版本。舊版號已依版本分資料�
 
 - `歷史區/V0.14/`
 - `歷史區/V0.14.1/`
-- `歷史區/V0.14.2/`
 
 ## 執行方式
 
 ```bash
 python -m pip install -r requirements.txt
-python MemoPen_V0.14.3.py
+python MemoPen_V0.14.2.py
 ```
 
 Windows 可直接以 Python Launcher 執行：
 
 ```bat
 py -m pip install -r requirements.txt
-py MemoPen_V0.14.3.py
+py MemoPen_V0.14.2.py
 ```
 
-## V0.14.3 更新
+## V0.14.2 更新
 
-- 修復無標題列視窗尺寸拉伸功能消失的問題。
-- 右下角尺寸握把移回真正角落，恢復直覺拖拉。
-- 新增四邊與四角拖拉縮放偵測，靠近邊緣會切換縮放游標。
+- 升級版本號至 `V0.14.2`。
 - 同步更新 `.py`、`.pyw`、Nuitka 批次檔與轉譯說明檔名。
-- 將 `V0.14.2` 收入 `歷史區/V0.14.2/`，根目錄保留最新版。
+- GitHub 首頁說明改為以 MemoPen 程式特色為主。
+- 維持 `V0.14.1` 的資料安全修正：開檔前儲存、關閉失敗保留視窗、UTF-8 原子寫入與讀檔錯誤提示。
 
 ## Nuitka 打包
 
 Windows 上可執行：
 
 ```bat
-build_MemoPen_V0.14.3_Nuitka.bat
+build_MemoPen_V0.14.2_Nuitka.bat
 ```
 
-完整說明請見 `MemoPen_V0.14.3_Nuitka_轉譯說明.txt`。
+完整說明請見 `MemoPen_V0.14.2_Nuitka_轉譯說明.txt`。
