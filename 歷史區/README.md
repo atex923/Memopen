@@ -7,7 +7,8 @@
 - `V0.14/`：原始 `MemoPen_V0.14_Nuitka_Package.zip` 內容。
 - `V0.14.1/`：上一版 Git 發布檔案，包含 `.py`、`.pyw`、Nuitka 建置檔、說明與文件。
 - `V0.14.2/`：上一版 Git 發布檔案，包含 `.py`、`.pyw`、Nuitka 建置檔、說明與文件。
+- `V0.14.3/`：修復無標題列視窗四邊、四角與右下角尺寸拉伸功能的完整版本。
 
 ## 最新版
 
-最新版請回到 repo 根目錄使用 `MemoPen_V0.14.3.py` 或 `MemoPen_V0.14.3.pyw`。
+最新版請回到 repo 根目錄使用 `MemoPen_V1.0.0.py` 或 `MemoPen_V1.0.0.pyw`。

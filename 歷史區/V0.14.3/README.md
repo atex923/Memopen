@@ -1,6 +1,6 @@
 # MemoPen
 
-MemoPen V1.0.0 是一個為「快速記下眼前想法」設計的輕量隨手記工具，支援 Windows、macOS 與可執行 PySide6 的 Linux 環境。介面保持乾淨、白底、無標題列，開啟後就能直接輸入，不需要先建立專案或設定檔案。
+MemoPen 是一個為「快速記下眼前想法」設計的輕量隨手記工具。它使用 PySide6 / Qt 製作，介面保持乾淨、白底、無標題列，開啟後就能直接輸入，不需要先建立專案或設定檔案。
 
 程式特別針對繁體中文輸入情境調整，支援中文輸入法組字、選字與全形符號，適合日常備忘、會議筆記、臨時清單、靈感紀錄與工作中快速暫存文字。
 
@@ -12,7 +12,6 @@ MemoPen V1.0.0 是一個為「快速記下眼前想法」設計的輕量隨手�
 - 支援項目編碼，可快速插入 `1、2、3、` 這類條列序號。
 - 每 30 秒自動儲存為 UTF-8 `.txt`，降低筆記遺失風險。
 - 新筆記會自動建立時間戳，檔名格式為 `Memo_YYYYMMDDhhmm.txt`。
-- 輸入區清空後若改開舊檔，會自動刪除本次啟動建立的空白新筆記，不留下多餘空檔。
 - 可開啟舊 TXT 檔，並支援 UTF-8、UTF-8 BOM、Big5、CP950 常見中文編碼。
 - 提供「Q」按鈕快速更換儲存資料夾。
 - 使用 `QSaveFile` 原子寫入，儲存過程更安全。
@@ -21,9 +20,9 @@ MemoPen V1.0.0 是一個為「快速記下眼前想法」設計的輕量隨手�
 
 ## 最新版本
 
-- [目前主程式：MemoPen_V1.0.0.py](MemoPen_V1.0.0.py)
-- [Windows 無主控台版本：MemoPen_V1.0.0.pyw](MemoPen_V1.0.0.pyw)
-- [Nuitka 建置批次檔：build_MemoPen_V1.0.0_Nuitka.bat](build_MemoPen_V1.0.0_Nuitka.bat)
+- 目前主程式：`MemoPen_V0.14.3.py`
+- Windows 無主控台版本：`MemoPen_V0.14.3.pyw`
+- Nuitka 建置批次檔：`build_MemoPen_V0.14.3_Nuitka.bat`
 
 ## 版本存放
 
@@ -32,36 +31,35 @@ GitHub 根目錄只保留最新可執行版本。舊版號已依版本分資料�
 - `歷史區/V0.14/`
 - `歷史區/V0.14.1/`
 - `歷史區/V0.14.2/`
-- `歷史區/V0.14.3/`
 
 ## 執行方式
 
 ```bash
 python -m pip install -r requirements.txt
-python MemoPen_V1.0.0.py
+python MemoPen_V0.14.3.py
 ```
 
 Windows 可直接以 Python Launcher 執行：
 
 ```bat
 py -m pip install -r requirements.txt
-py MemoPen_V1.0.0.py
+py MemoPen_V0.14.3.py
 ```
 
-## V1.0.0 更新
+## V0.14.3 更新
 
-- 開啟舊檔時，若輸入區為空白，會刪除本次啟動建立的新筆記檔。
-- 刪除範圍只限程式本次建立的檔案，不會刪除啟動前已存在的空白檔案。
-- 保留 V0.14.3 的四邊、四角與右下角視窗尺寸拉伸功能。
+- 修復無標題列視窗尺寸拉伸功能消失的問題。
+- 右下角尺寸握把移回真正角落，恢復直覺拖拉。
+- 新增四邊與四角拖拉縮放偵測，靠近邊緣會切換縮放游標。
 - 同步更新 `.py`、`.pyw`、Nuitka 批次檔與轉譯說明檔名。
-- 將 `V0.14.3` 收入 `歷史區/V0.14.3/`，根目錄保留最新版。
+- 將 `V0.14.2` 收入 `歷史區/V0.14.2/`，根目錄保留最新版。
 
 ## Nuitka 打包
 
 Windows 上可執行：
 
 ```bat
-build_MemoPen_V1.0.0_Nuitka.bat
+build_MemoPen_V0.14.3_Nuitka.bat
 ```
 
-完整說明請見 `MemoPen_V1.0.0_Nuitka_轉譯說明.txt`。
+完整說明請見 `MemoPen_V0.14.3_Nuitka_轉譯說明.txt`。
