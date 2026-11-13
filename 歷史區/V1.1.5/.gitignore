@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+dist/
+build/
+*.build/
+*.dist/
+*.onefile-build/
+nuitka_standalone_check/
+*.spec

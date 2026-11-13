@@ -1,6 +1,6 @@
 # MemoPen
 
-MemoPen V1.1.5 是一個使用 PySide6 / Qt 製作的桌面隨手記工具，支援 Windows、macOS 與 Linux。介面保持乾淨、白底、無標題列，開啟後就能直接輸入，不需要先建立專案或設定檔案。
+MemoPen V1.1.6 是一個使用 PySide6 / Qt 製作的桌面隨手記工具，支援 Windows、macOS 與 Linux。介面保持乾淨、白底、無標題列，開啟後就能直接輸入，不需要先建立專案或設定檔案。
 
 程式特別針對繁體中文輸入情境調整，支援中文輸入法組字、選字與全形符號，適合日常備忘、會議筆記、臨時清單、靈感紀錄與工作中快速暫存文字。
 
@@ -22,9 +22,9 @@ MemoPen V1.1.5 是一個使用 PySide6 / Qt 製作的桌面隨手記工具，支
 
 ## 最新版本
 
-- [目前主程式：MemoPen_V1.1.5.py](MemoPen_V1.1.5.py)
-- [Windows 無主控台版本：MemoPen_V1.1.5.pyw](MemoPen_V1.1.5.pyw)
-- [Nuitka 建置批次檔：build_MemoPen_V1.1.5_Nuitka.bat](build_MemoPen_V1.1.5_Nuitka.bat)
+- [目前主程式：MemoPen_V1.1.6.py](MemoPen_V1.1.6.py)
+- [Windows 無主控台版本：MemoPen_V1.1.6.pyw](MemoPen_V1.1.6.pyw)
+- [Nuitka 建置批次檔：build_MemoPen_V1.1.6_Nuitka.bat](build_MemoPen_V1.1.6_Nuitka.bat)
 
 ## 版本存放
 
@@ -36,22 +36,26 @@ GitHub 根目錄只保留最新可執行版本。舊版號已依版本分資料�
 - `歷史區/V0.14.3/`
 - `歷史區/V1.0.0/`
 - `歷史區/V1.1.4/`
+- `歷史區/V1.1.5/`
 
 ## 執行方式
 
 ```bash
 python -m pip install -r requirements.txt
-python MemoPen_V1.1.5.py
+python MemoPen_V1.1.6.py
 ```
 
 Windows 可直接以 Python Launcher 執行：
 
 ```bat
 py -m pip install -r requirements.txt
-py MemoPen_V1.1.5.py
+py MemoPen_V1.1.6.py
 ```
 
-## V1.1.5 更新
+## V1.1.6 更新
+
+- 重編號只更新標號並保留原 TXT 行首縮排，避免跨平台重新開啟後版面被改形。
+- 延續第五階 `1. ` 格式、普通文字目前行加碼、Enter 子樹後插入與空白文件清理修正。
 
 - 導入 V1.1.3 的十階編碼、升降階、系統匣、字體調整與事件式自動儲存功能。
 - 修正開啟舊檔時的回歸問題：輸入區空白時，刪除本次建立的空白新筆記。
@@ -67,7 +71,7 @@ py MemoPen_V1.1.5.py
 Windows 上可執行：
 
 ```bat
-build_MemoPen_V1.1.5_Nuitka.bat
+build_MemoPen_V1.1.6_Nuitka.bat
 ```
 
-完整說明請見 `MemoPen_V1.1.5_Nuitka_轉譯說明.txt`。
+完整說明請見 `MemoPen_V1.1.6_Nuitka_轉譯說明.txt`。
