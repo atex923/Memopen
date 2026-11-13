@@ -1,12 +1,13 @@
 # MemoPen
 
-MemoPen V1.1.4 是一個使用 PySide6 / Qt 製作的桌面隨手記工具，支援 Windows、macOS 與 Linux。介面保持乾淨、白底、無標題列，開啟後就能直接輸入，不需要先建立專案或設定檔案。
+MemoPen V1.1.5 是一個使用 PySide6 / Qt 製作的桌面隨手記工具，支援 Windows、macOS 與 Linux。介面保持乾淨、白底、無標題列，開啟後就能直接輸入，不需要先建立專案或設定檔案。
 
 程式特別針對繁體中文輸入情境調整，支援中文輸入法組字、選字與全形符號，適合日常備忘、會議筆記、臨時清單、靈感紀錄與工作中快速暫存文字。
 
 ## 程式特色
 
 - 十階編碼支援國字、數字、英文字母與多種括號格式，可自動接續條列。
+- 第五階新編碼固定使用 `1. `；舊式 `1.正文`、`1.` 與 `1. 正文` 都能辨識，`3.14` 仍視為普通文字。
 - 支援子樹升階、降階，保留一般文字與編碼項目的階層關係。
 - 停止輸入 2 秒後事件式自動儲存，切換應用程式或離開前也會補存。
 - 使用背景單一工作執行緒與 `QSaveFile` 原子寫入，並檢查檔案是否被其他程式修改。
@@ -21,9 +22,9 @@ MemoPen V1.1.4 是一個使用 PySide6 / Qt 製作的桌面隨手記工具，支
 
 ## 最新版本
 
-- [目前主程式：MemoPen_V1.1.4.py](MemoPen_V1.1.4.py)
-- [Windows 無主控台版本：MemoPen_V1.1.4.pyw](MemoPen_V1.1.4.pyw)
-- [Nuitka 建置批次檔：build_MemoPen_V1.1.4_Nuitka.bat](build_MemoPen_V1.1.4_Nuitka.bat)
+- [目前主程式：MemoPen_V1.1.5.py](MemoPen_V1.1.5.py)
+- [Windows 無主控台版本：MemoPen_V1.1.5.pyw](MemoPen_V1.1.5.pyw)
+- [Nuitka 建置批次檔：build_MemoPen_V1.1.5_Nuitka.bat](build_MemoPen_V1.1.5_Nuitka.bat)
 
 ## 版本存放
 
@@ -34,34 +35,39 @@ GitHub 根目錄只保留最新可執行版本。舊版號已依版本分資料�
 - `歷史區/V0.14.2/`
 - `歷史區/V0.14.3/`
 - `歷史區/V1.0.0/`
+- `歷史區/V1.1.4/`
 
 ## 執行方式
 
 ```bash
 python -m pip install -r requirements.txt
-python MemoPen_V1.1.4.py
+python MemoPen_V1.1.5.py
 ```
 
 Windows 可直接以 Python Launcher 執行：
 
 ```bat
 py -m pip install -r requirements.txt
-py MemoPen_V1.1.4.py
+py MemoPen_V1.1.5.py
 ```
 
-## V1.1.4 更新
+## V1.1.5 更新
 
 - 導入 V1.1.3 的十階編碼、升降階、系統匣、字體調整與事件式自動儲存功能。
 - 修正開啟舊檔時的回歸問題：輸入區空白時，刪除本次建立的空白新筆記。
 - 只刪除程式本次建立的候選檔，不會刪除啟動前已存在的檔案。
 - 將 V1.0.0 收入 `歷史區/V1.0.0/`，根目錄保留最新版。
+- 修正第五階句點編碼的固定空格與 `3.14` 普通文字辨識。
+- 一般文字行按「項目」時直接加上編碼，並依前後合法項目選擇階層。
+- Enter 接續第五階編碼時保留空項尾端空格與正文欄位。
+- 將 V1.1.4 收入 `歷史區/V1.1.4/`，根目錄保留最新版。
 
 ## Nuitka 打包
 
 Windows 上可執行：
 
 ```bat
-build_MemoPen_V1.1.4_Nuitka.bat
+build_MemoPen_V1.1.5_Nuitka.bat
 ```
 
-完整說明請見 `MemoPen_V1.1.4_Nuitka_轉譯說明.txt`。
+完整說明請見 `MemoPen_V1.1.5_Nuitka_轉譯說明.txt`。
